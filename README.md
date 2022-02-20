@@ -208,13 +208,11 @@ A[1..N] <- in
 B[1..log(N)][1..N]
 
 -- RUN:
-run {
-    pfor (i = 1 .. N):
-        B[0][i] = A[i]
-    for (h = 1 .. log(N)):
-        pfor (i = 1 .. (N / 2^h)):
-            B[h][i] = B[h - 1][2 * i - 1] + B[h - 1][2 * i]
-}
+pfor (i = 1 .. N):
+    B[0][i] = A[i]
+for (h = 1 .. log(N)):
+    pfor (i = 1 .. (N / 2^h)):
+        B[h][i] = B[h - 1][2 * i - 1] + B[h - 1][2 * i]
 
 -- OUTPUT:
 out <- B[log(N)][1]
@@ -248,3 +246,27 @@ out <- B[log(N)][1]
 > В модели **ForkJoin** реализация `pfor` обладает следующими асимптотиками:
 > + **work:** ![O(N)](https://latex.codecogs.com/svg.latex?O(N))
 > + **span:** ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
+
+**Пример программы #4 (ForkJoin):**
+> Дана матрица. Увеличить каждый элемент на 1.
+>
+> С какой асимптотикой работает код ниже?
+
+```haskell
+-- INPUT:
+N <- in
+M <- in
+X[1..N][1..M] <- in
+
+-- RUN:
+pfor (i = 1 .. N):
+    pfor (j = 1 .. M):
+        X[i][j]++
+
+-- OUTPUT:
+out <- X[1..N][1..M]
+```
+
+> Ответ: асиптотика:
+> + **work:** ![O(N * M)](https://latex.codecogs.com/svg.latex?O(N&space;\cdot&space;M))
+> + **span:** ![O(log(N) + log(M))](https://latex.codecogs.com/svg.latex?O(log(N)+log(M)))
