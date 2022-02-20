@@ -90,3 +90,37 @@
 ***Утверждение:***
 > Любой алгоритм в модели **CRCW** может быть записан в модели **EREW**, при этом его **_depth_** умножится на **_log(N)_**.
 
+***Пример программы:***
+> Дан массив. Просуммировать все элементы.
+
+```haskell
+-- INPUT:
+N <- in
+A[1..N] <- in
+
+-- DECLARE:
+B[1..N]
+
+-- RUN IN PARALLEL ON N PROCESSES:
+parallel run {
+    processId -> {
+        w <- A[processId]
+        B[processId] <- w
+        for (h = 1 .. log(N)):
+            if (id <= N / 2^h):
+                x <- B[2 * processId - 1]
+                y <- B[2 * processId]
+                z = x + y
+                B[processId] <- z
+        else:
+            skip(4)
+    }
+}
+
+-- OUTPUT:
+out <- B[1]
+
+-- ASYMPTOTICS:
+work = O(N * log(N))
+depth = O(log(N))
+```
