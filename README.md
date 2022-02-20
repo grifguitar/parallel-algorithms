@@ -270,3 +270,5 @@ out <- X[1..N][1..M]
 > Ответ:
 > + **work:** ![O(N * M)](https://latex.codecogs.com/svg.latex?O(N&space;\cdot&space;M))
 > + **span:** ![O(log(N) + log(M))](https://latex.codecogs.com/svg.latex?O(log(N)+log(M)))
+
+---
