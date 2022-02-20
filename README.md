@@ -224,7 +224,7 @@ out <- B[log(N)][1]
 
 ---
 
-### &#167; 3: Модель ForkJoin.
+### &sect; 3: Модель ForkJoin.
 
 ![graph1](https://github.com/grifguitar/parallel-algorithms/blob/main/graph1.svg)
 
