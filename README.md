@@ -7,7 +7,6 @@
 # Lecture 1
 
 ---
----
 
 ## Раздел 1: Concurrency is not Parallelism!
 
@@ -59,7 +58,6 @@
 > ![N](https://latex.codecogs.com/svg.latex?N)
 > потоков, для ускорения решения общей "задачи".
 
----
 ---
 
 ## Раздел 2: Модели параллельных вычислений.
