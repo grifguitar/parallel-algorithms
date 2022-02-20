@@ -119,8 +119,8 @@ parallel run {
 
 -- OUTPUT:
 out <- B[1]
-
--- ASYMPTOTICS:
-work = O(N * log(N))
-depth = O(log(N))
 ```
+
+> Асимптотика:
+> + ![work=O(N*log(N))](https://latex.codecogs.com/svg.latex?work=O(N*log(N)))
+> + ![depth=O(log(N))](https://latex.codecogs.com/svg.latex?depth=O(log(N)))
