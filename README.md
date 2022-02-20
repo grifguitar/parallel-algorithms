@@ -122,5 +122,5 @@ out <- B[1]
 ```
 
 > Асимптотика:
-> + ![work=O(N*log(N))](https://latex.codecogs.com/svg.latex?work=O(N*log(N)))
-> + ![depth=O(log(N))](https://latex.codecogs.com/svg.latex?depth=O(log(N)))
+> + ![work: O(N*log(N))](https://latex.codecogs.com/svg.latex?work:&space;O(N*log(N)))
+> + ![depth: O(log(N))](https://latex.codecogs.com/svg.latex?depth:&space;O(log(N)))
