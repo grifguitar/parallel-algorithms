@@ -160,7 +160,7 @@ parallel run {
                 skip(4)
         
         if (k == 1):
-            C[i][j] = D[i][j][k]
+            C[i][j] <- D[i][j][k]
         else:
             skip(1)
     }
