@@ -228,11 +228,11 @@ out <- B[log(N)][1]
 
 #### Параграф 3: Модель ForkJoin.
 
+![graph1](https://github.com/grifguitar/parallel-algorithms/blob/main/graph1.svg)
+
 Любую модель вычислений можно представить в виде **DAG** (Directed Acyclic Graph).
 
 Вершина графа - "задача". Ребро графа - переход между "задачами".
-
-![O(N)](https://github.com/grifguitar/parallel-algorithms/blob/main/graph1.svg)
 
 **Запомним:**
 > У алгоритмов в модели **ForkJoin** есть следующие асимптотические оценки:
