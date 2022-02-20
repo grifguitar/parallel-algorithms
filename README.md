@@ -124,8 +124,8 @@ out <- B[1]
 ```
 
 > Асимптотика:
-> + **_work:_**  ![O(N*log(N))](https://latex.codecogs.com/svg.latex?O(N&space;\cdot&space;log(N)))
-> + **_depth:_**  ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
+> + **_work:_** &space;![O(N*log(N))](https://latex.codecogs.com/svg.latex?O(N&space;\cdot&space;log(N)))
+> + **_depth:_** &space;![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
 
 ***Пример программы #2 (CREW):***
 > Дано две матрицы. Перемножить их.
@@ -171,8 +171,8 @@ out <- C[1..N][1..N]
 ```
 
 > Асимптотика:
-> + **_work:_**  ![O(N^3 * log(N))](https://latex.codecogs.com/svg.latex?O(N^{3}&space;\cdot&space;log(N)))
-> + **_depth:_**  ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
+> + **_work:_** &space;![O(N^3 * log(N))](https://latex.codecogs.com/svg.latex?O(N^{3}&space;\cdot&space;log(N)))
+> + **_depth:_** &space;![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
 
 ***Вывод:***
 > Одна из первых моделей.
