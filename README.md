@@ -112,8 +112,8 @@ parallel run {
                 y <- B[2 * processId]
                 z = x + y
                 B[processId] <- z
-        else:
-            skip(4)
+            else:
+                skip(4)
     }
 }
 
