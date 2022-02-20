@@ -92,12 +92,12 @@
 > + ![O_work](https://latex.codecogs.com/svg.latex?O_{work}(...)) &mdash; общее количество инструкций (время работы на одном потоке)
 > + ![O_depth](https://latex.codecogs.com/svg.latex?O_{depth}(...)) &mdash; глубина инструкций (время работы на бесконечности потоков)
 
-Мы пытаемся сделать так, чтобы **_work_** &mdash; был приближен к последовательному алгоритму, а **_depth_** &mdash; был
-чем быстрее, тем лучше.
+Мы пытаемся сделать так, чтобы **work** &mdash; был приближен к последовательному алгоритму, а **depth** &mdash; был чем
+быстрее, тем лучше.
 
 **Утверждение:**
 > Любой алгоритм в модели **CRCW** может быть записан в модели **EREW**,
-> при этом его **_depth_** увеличится в
+> при этом его **depth** увеличится в
 > ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N))) раз.
 
 **Пример программы #1 (EREW):**
@@ -132,8 +132,8 @@ out <- B[1]
 ```
 
 > Асимптотика:
-> + **_work_** = ![O(N*log(N))](https://latex.codecogs.com/svg.latex?O(N&space;\cdot&space;log(N)))
-> + **_depth_** = ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
+> + **work:** ![O(N*log(N))](https://latex.codecogs.com/svg.latex?O(N&space;\cdot&space;log(N)))
+> + **depth:** ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
 
 **Пример программы #2 (CREW):**
 > Дано две матрицы. Перемножить их.
@@ -179,21 +179,21 @@ out <- C[1..N][1..N]
 ```
 
 > Асимптотика:
-> + **_work_** = ![O(N^3 * log(N))](https://latex.codecogs.com/svg.latex?O(N^{3}&space;\cdot&space;log(N)))
-> + **_depth_** = ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
+> + **work:** ![O(N^3 * log(N))](https://latex.codecogs.com/svg.latex?O(N^{3}&space;\cdot&space;log(N)))
+> + **depth:** ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
 
 **Вывод:**
 > Одна из первых моделей.
 > В этой модели есть большой недостаток: обязательные `none` инструкции.
 > Реальная асимптотика в примере #1 (без `none` инструкций) была бы
-> **_work_** = ![O(N)](https://latex.codecogs.com/svg.latex?O(N)),
+> **work:** ![O(N)](https://latex.codecogs.com/svg.latex?O(N)),
 > но мы вынуждены простаивать.
 
 ---
 
 #### Параграф 2: Модель PFOR.
 
-Считаем, что нам дан цикл **_pfor_** (parallel for), который сам занимается вопросами _scheduling_ (планирования
+Считаем, что нам дан цикл **pfor** (parallel for), который сам занимается вопросами _scheduling_ (планирования
 исполнения).
 
 **Пример программы #3 (PFOR):**
@@ -221,7 +221,7 @@ out <- B[log(N)][1]
 ```
 
 > Асимптотика:
-> + **_work_** = ![O(N)](https://latex.codecogs.com/svg.latex?O(N))
-> + **_depth_** = ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
+> + **work:** ![O(N)](https://latex.codecogs.com/svg.latex?O(N))
+> + **depth:** ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
 
 ---
