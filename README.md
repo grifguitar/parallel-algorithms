@@ -100,7 +100,7 @@
 > при этом его **depth** увеличится в
 > ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N))) раз.
 
-**Пример программы #1 (EREW):**
+**Пример #1 (EREW):**
 > Дан массив. Посчитать сумму элементов.
 
 ```haskell
@@ -135,7 +135,7 @@ out <- B[1]
 > + **work:** ![O(N*log(N))](https://latex.codecogs.com/svg.latex?O(N&space;\cdot&space;log(N)))
 > + **depth:** ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
 
-**Пример программы #2 (CREW):**
+**Пример #2 (CREW):**
 > Дано две матрицы. Перемножить их.
 
 ```haskell
@@ -196,7 +196,7 @@ out <- C[1..N][1..N]
 Считаем, что нам дан цикл `pfor` (parallel for), который сам занимается вопросами _scheduling_
 (планирования исполнения).
 
-**Пример программы #3 (PFor):**
+**Пример #3 (PFor):**
 > Дан массив. Посчитать сумму элементов.
 
 ```haskell
