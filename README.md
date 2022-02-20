@@ -76,10 +76,10 @@
 > Варианты модели **PRAM**:
 > + **EREW** (Exclusive Read Exclusive Write)
 > + **CREW** (Concurrent Read Exclusive Write)
-> + **CRCW** (Concurrent Read Concurrent Write
+> + **CRCW** (Concurrent Read Concurrent Write <!---@formatter:off-->
 >   + **common** (при одновременной записи все потоки обязаны писать одно и то же)
 >   + **arbitrary** (при одновременной записи, гонку данных выигрывает случайный поток)
->   + **priority** (при одновременной записи, гонку данных выигрывает поток с наименьшим номером)
+>   + **priority** (при одновременной записи, гонку данных выигрывает поток с наименьшим номером) <!---@formatter:on-->
 
 ***Запомним:***
 > У алгоритмов в модели **PRAM** есть следующие асимптотические оценки:
