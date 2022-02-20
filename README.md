@@ -81,6 +81,6 @@
 
 ***Запомним:***
 > У алгоритмов в модели PRAM есть:
-> + ![O_work](https://latex.codecogs.com/svg.latex?\Large&space;O_{work}(.)) &mdash; общее количество инструкций
-> + ![O_span](https://latex.codecogs.com/svg.latex?\Large&space;O_{span}(.)) &mdash; глубина инструкций
+> + ![O_work](https://latex.codecogs.com/svg.latex?O_{work}()) &mdash; общее количество инструкций (время работы на одном потоке)
+> + ![O_span](https://latex.codecogs.com/svg.latex?O_{span}()) &mdash; глубина инструкций (время работы на бесконечности потоков)
 
