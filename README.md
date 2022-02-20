@@ -247,7 +247,7 @@ out <- B[log(N)][1]
 > + **work:** ![O(N)](https://latex.codecogs.com/svg.latex?O(N))
 > + **span:** ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
 
-**Пример программы #4 (ForkJoin):**
+**Задача #1 (ForkJoin):**
 > Дана матрица. Увеличить каждый элемент на 1.
 >
 > С какой асимптотикой работает код ниже?
@@ -267,6 +267,6 @@ pfor (i = 1 .. N):
 out <- X[1..N][1..M]
 ```
 
-> Ответ: асиптотика:
+> Ответ:
 > + **work:** ![O(N * M)](https://latex.codecogs.com/svg.latex?O(N&space;\cdot&space;M))
 > + **span:** ![O(log(N) + log(M))](https://latex.codecogs.com/svg.latex?O(log(N)+log(M)))
