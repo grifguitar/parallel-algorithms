@@ -7,3 +7,4 @@
 ## Lecture 1. Introduction
 
 [Конспект](https://github.com/grifguitar/parallel-algorithms/blob/main/main.ipynb)
+
