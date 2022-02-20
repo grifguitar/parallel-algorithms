@@ -54,6 +54,8 @@
 
 #### Параграф 3: Модель PRAM.
 
+Пусть есть таблица ![M * N](https://latex.codecogs.com/svg.latex?\Large&space;M\timesN)
+
 |   | P[1] | P[2]  | .... | P[N] |
 |---|------|-------|------|------|
 | 1 | read | none  | 2+2  | none |
@@ -69,3 +71,6 @@
 + EREW (Exclusive read exclusive write)
 + CREW (Concurrent read exclusive write)
 + CRCW (Concurrent read concurrent right)
+    + common (при одновременной записи все потоки обязаны писать одно и то же)
+    + arbitrary (при одновременной записи выигрывает гонку данных случайный поток)
+    + priority (при одновременной записи выигрывает гонку данных поток с наименьшим номером)
