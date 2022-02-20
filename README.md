@@ -11,7 +11,7 @@
 #### Параграф 1: Многопоточные _(concurrency)_ структуры данных и алгоритмы.
 
 Допустим, есть
-<img src="https://latex.codecogs.com/svg.latex?N">
+![N](https://latex.codecogs.com/svg.latex?N)
 потоков.
 
 Мы хотим &mdash; реализовать структуру данных `vector`, чтобы можно было взаимодействовать с `vector` параллельно из
