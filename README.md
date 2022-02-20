@@ -54,7 +54,7 @@
 
 #### Параграф 3: Модель PRAM.
 
-Пусть есть таблица ![M * N](https://latex.codecogs.com/svg.latex?\Large&space;M \times N)
+Пусть есть таблица ![M * N](https://latex.codecogs.com/svg.latex?\Large&space;M&space;\times&space;N)
 
 |   | P[1] | P[2]  | .... | P[N] |
 |---|------|-------|------|------|
