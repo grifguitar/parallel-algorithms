@@ -76,7 +76,7 @@
 
 + **EREW** (Exclusive Read Exclusive Write)
 + **CREW** (Concurrent Read Exclusive Write)
-+ **CRCW** (Concurrent Read Concurrent Right)
++ **CRCW** (Concurrent Read Concurrent Wright)
     + common (при одновременной записи все потоки обязаны писать одно и то же)
     + arbitrary (при одновременной записи выигрывает гонку данных случайный поток)
     + priority (при одновременной записи выигрывает гонку данных поток с наименьшим номером)
@@ -92,7 +92,7 @@
 ***Утверждение:***
 > Любой алгоритм в модели **CRCW** может быть записан в модели **EREW**, при этом его **_depth_** умножится на **_log(N)_**.
 
-***Пример программы (EREW):***
+***Пример программы #1 (EREW):***
 > Дан массив. Просуммировать все элементы.
 
 ```haskell
@@ -103,7 +103,7 @@ A[1..N] <- in
 -- DECLARE:
 B[1..N]
 
--- RUN IN PARALLEL ON N PROCESSES:
+-- PARALLEL RUN ON N PROCESSES:
 parallel run {
     processId -> {
         w <- A[processId]
@@ -125,4 +125,51 @@ out <- B[1]
 
 > Асимптотика:
 > + **_work:_**  ![O(N*log(N))](https://latex.codecogs.com/svg.latex?O(N&space;\cdot&space;log(N)))
+> + **_depth:_**  ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
+
+***Пример программы #2 (CREW):***
+> Дано две матрицы. Перемножить их.
+
+```haskell
+-- INPUT:
+N <- in
+A[1..N][1..N] <- in
+B[1..N][1..N] <- in
+
+-- DECLARE:
+C[1..N][1..N]
+D[1..N][1..N][1..N]
+
+-- PARALLEL RUN ON N^3 PROCESSES:
+parallel run {
+    processId -> {
+        (i, j, k) <- processId
+        
+        x <- A[i][k]
+        y <- B[k][j]
+        z = x * y
+        D[i][j][k] <- z
+        
+        for (h = 1 .. log(N)):
+            if (k <= N / 2^h):
+                x <- D[i][j][2 * k - 1]
+                y <- D[i][j][2 * k]
+                z = x + y
+                D[i][j][k] <- z
+            else:
+                skip(4)
+        
+        if (k == 1):
+            C[i][j] = D[i][j][k]
+        else:
+            skip(1)
+    }
+}
+
+-- OUTPUT:
+out <- C[1..N][1..N]
+```
+
+> Асимптотика:
+> + **_work:_**  ![O(N^{3}*log(N))](https://latex.codecogs.com/svg.latex?O(N&space;\cdot&space;log(N)))
 > + **_depth:_**  ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
