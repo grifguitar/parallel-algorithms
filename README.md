@@ -7,8 +7,7 @@
 ---
 ---
 
-## Lecture 1
-
+Lecture 1
 ---
 
 ### Раздел 1: Concurrency is not Parallelism!
