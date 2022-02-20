@@ -6,4 +6,4 @@
 
 ## Lecture 1. Introduction
 
-### 1. Concurrency is not Parallelism!
+[Конспект](https://github.com/grifguitar/parallel-algorithms/blob/main/main.ipynb)
