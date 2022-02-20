@@ -63,7 +63,7 @@
 #### Параграф 1: Модель PRAM.
 
 Пусть есть таблица размера
-![M * N](https://latex.codecogs.com/svg.latex?M\timesN) (где
+![M * N](https://latex.codecogs.com/svg.latex?M&space;\times&space;N) (где
 ![N](https://latex.codecogs.com/svg.latex?N) &mdash; число потоков,
 ![M](https://latex.codecogs.com/svg.latex?M) &mdash; глубина).
 
