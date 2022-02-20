@@ -76,7 +76,7 @@
 
 + **EREW** (Exclusive Read Exclusive Write)
 + **CREW** (Concurrent Read Exclusive Write)
-+ **CRCW** (Concurrent Read Concurrent Wright)
++ **CRCW** (Concurrent Read Concurrent Write)
     + common (при одновременной записи все потоки обязаны писать одно и то же)
     + arbitrary (при одновременной записи выигрывает гонку данных случайный поток)
     + priority (при одновременной записи выигрывает гонку данных поток с наименьшим номером)
