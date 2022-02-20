@@ -173,3 +173,9 @@ out <- C[1..N][1..N]
 > Асимптотика:
 > + **_work:_**  ![O(N^3 * log(N))](https://latex.codecogs.com/svg.latex?O(N^{3}&space;\cdot&space;log(N)))
 > + **_depth:_**  ![O(log(N))](https://latex.codecogs.com/svg.latex?O(log(N)))
+
+***Вывод:***
+> Одна из первых моделей.
+> В этой модели есть большой недостаток: обязательные `none` инструкции.
+> Примере #1 (без `none` инструкций) был бы **_work:_** ![O(N)](https://latex.codecogs.com/svg.latex?O(N)),
+> но мы вынуждены простаивать.
