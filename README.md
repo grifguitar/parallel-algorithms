@@ -272,3 +272,49 @@ out <- X[1..N][1..M]
 > + **span:** ![O(log(N) + log(M))](https://latex.codecogs.com/svg.latex?O(log(N)+log(M)))
 
 ---
+
+## Practice
+
+### Launch 1:
+
+`NUM_THREADS = 4`
+
+```haskell
+HELLO! LAUNCH:
+test: SIMPLE_BFS_TEST; arg: 3; 0 ms
+test: SIMPLE_BFS_TEST; arg: 10; 0 ms
+test: SIMPLE_BFS_TEST; arg: 50; 1.1 ms
+test: SIMPLE_BFS_TEST; arg: 100; 18.4 ms
+test: SIMPLE_BFS_TEST; arg: 150; 108.8 ms
+test: SIMPLE_BFS_TEST; arg: 170; 175.7 ms
+test: PARALLEL_BFS_TEST; arg: 3; 0 ms
+test: PARALLEL_BFS_TEST; arg: 10; 0 ms
+test: PARALLEL_BFS_TEST; arg: 50; 1.5 ms
+test: PARALLEL_BFS_TEST; arg: 100; 8.3 ms
+test: PARALLEL_BFS_TEST; arg: 150; 38.1 ms
+test: PARALLEL_BFS_TEST; arg: 170; 57.5 ms
+```
+
+### Launch 2:
+
+`NUM_THREADS = 4`
+
+```haskell
+HELLO! LAUNCH:
+test: SIMPLE_SCAN_TEST; arg: 1048576; 1.2 ms
+test: SIMPLE_SCAN_TEST; arg: 4194304; 4.8 ms
+test: SIMPLE_SCAN_TEST; arg: 16777216; 19.3 ms
+test: SIMPLE_SCAN_TEST; arg: 67108864; 76.9 ms
+test: PARALLEL_SCAN_TEST; arg: 1048576; 0.7 ms
+test: PARALLEL_SCAN_TEST; arg: 4194304; 4 ms
+test: PARALLEL_SCAN_TEST; arg: 16777216; 17.5 ms
+test: PARALLEL_SCAN_TEST; arg: 67108864; 64 ms
+test: SIMPLE_FILTER_TEST; arg: 1048576; 12.2 ms
+test: SIMPLE_FILTER_TEST; arg: 4194304; 49.2 ms
+test: SIMPLE_FILTER_TEST; arg: 16777216; 196.5 ms
+test: SIMPLE_FILTER_TEST; arg: 67108864; 791 ms
+test: PARALLEL_FILTER_TEST; arg: 1048576; 6.7 ms
+test: PARALLEL_FILTER_TEST; arg: 4194304; 27.1 ms
+test: PARALLEL_FILTER_TEST; arg: 16777216; 102.1 ms
+test: PARALLEL_FILTER_TEST; arg: 67108864; 391.4 ms
+```
